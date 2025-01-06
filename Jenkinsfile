@@ -23,8 +23,8 @@ pipeline {
         stage('Docker Image Build') {
             steps {
                 script {
-                    sh "docker build -t your-dockerhub-username/mybuildimage:${env.BUILD_NUMBER} ."
-                    sh "docker tag your-dockerhub-username/mybuildimage:${env.BUILD_NUMBER} your-dockerhub-username/mybuildimage:latest"
+                    sh "docker build -t desali/mybuildimage:${env.BUILD_NUMBER} ."
+                    sh "docker tag desali/mybuildimage:${env.BUILD_NUMBER} your-dockerhub-username/mybuildimage:latest"
                 }
             }
         }
